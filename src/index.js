@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+// import Hello from './component/Hello'
+import Movie from './component/Movie'
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Provider store={store}>
+    {/* <Hello name="Tidlor" />   */}
+    <Movie/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
